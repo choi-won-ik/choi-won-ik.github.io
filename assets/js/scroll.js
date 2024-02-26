@@ -9,14 +9,12 @@ $(document).ready(()=>{
     const $menu = document.getElementById('nav nav-pills flex-column mb-auto');
     const $menuAll = $menu.getElementsByTagName('label');
     
-    console.log(windowHeight*-1);
 
     // 처음 window scroll위치 지정
     for (let i = 0; i < $contentAll.length; i++) {
       if(windowHeight*-1<$contentAll[i].getBoundingClientRect().top&&$contentAll[i].getBoundingClientRect().top<windowHeight){
         countSave=i;
         count=i;
-        console.log($contentAll[i].getBoundingClientRect().top);
       }
     }
     $menuAll[countSave].classList.add('on');
