@@ -15,46 +15,27 @@ $(document).ready(()=>{
   const $sendMail = document.getElementById('sendMail');
 
   function createData() {
-    var sendData = $('#mailForm').serialize();
+    let sendData = $('#mailForm').serialize();
     return sendData;
   }
 
   $sendMail.addEventListener('click',(event)=>{
     event.preventDefault();
 
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var subject = document.getElementById('subject').value;
-    var msg = document.getElementById('msg').value;
-
-    // 서버로 보낼 데이터
-    var data = {
-      name: name,
-      email: email,
-      subject: subject,
-      msg: msg
-    };
-
-
-    fetch('https://script.google.com/macros/s/AKfycbwJNjPrS5uFVBPaxifLqjCQkm53rcpA-DoDVjb82iIXkQmjCuvR7spajjH6qvyAme-g/exec', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data)
-    })
-    .then(response => {
-      if (response.ok) {
-        alert('메일이 성공적으로 보내졌습니다.');
-      } else {
-        alert('메일 보내기 실패');
-      }
-    })
-    .catch(error => {
-      console.error('에러:', error);
-      alert('메일 보내기 실패');
-    });
-
+    
+		$.ajax({
+			type : "POST",
+			url : "https://script.google.com/macros/s/AKfycbwJNjPrS5uFVBPaxifLqjCQkm53rcpA-DoDVjb82iIXkQmjCuvR7spajjH6qvyAme-g/exec",
+			data : createData(),
+			datatype:"json",
+			success : function(data, status, xhr){
+        alert('연락주셔서 감사합니다. 빠른 시간내에 꼭 회신드리도록 하겠습니다! :)');
+			},
+			error : function(jqXHR, textStatus, errorThrown){
+				console.log("error")
+			}
+		});
+		
   });
 
 
@@ -219,7 +200,7 @@ $(document).ready(()=>{
               </dd>
             </dl>
 
-            <form class="mailForm" id="mailForm">
+            <form class="mailForm" id="mailForm" method="post">
               <div>
                 <input class="mailInput" type="text" id="name" name="name" placeholder="성함">
               </div>
