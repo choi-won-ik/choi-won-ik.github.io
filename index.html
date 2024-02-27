@@ -7,44 +7,9 @@
 </head>
 <script src="https://code.jquery.com/jquery-3.7.1.slim.js"></script>
 <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="assets/js/scroll.js"></script>
 <script src="assets/js/function.js"></script>
-
-<script>
-$(document).ready(()=>{
-  const $sendMail = document.getElementById('sendMail');
-
-  function createData() {
-    let sendData = $('#mailForm').serialize();
-    return sendData;
-  }
-
-  $sendMail.addEventListener('click',(event)=>{
-    event.preventDefault();
-
-    
-		$.ajax({
-			type : "POST",
-			url : "https://script.google.com/macros/s/AKfycbwJNjPrS5uFVBPaxifLqjCQkm53rcpA-DoDVjb82iIXkQmjCuvR7spajjH6qvyAme-g/exec",
-			data : createData(),
-			datatype:"json",
-			success : function(data, status, xhr){
-        alert('연락주셔서 감사합니다. 빠른 시간내에 꼭 회신드리도록 하겠습니다! :)');
-			},
-			error : function(jqXHR, textStatus, errorThrown){
-				console.log("error")
-			}
-		});
-		
-  });
-
-
-});
-
-
-
-</script>
-
 <body>
     <main class="d-flex flex-nowrap">
 
@@ -152,10 +117,6 @@ $(document).ready(()=>{
 
 
 
-
-
-
-
           <li class="Portfolio">
             <hr class="line">
             <h1>Portfolio</h1>
@@ -163,7 +124,7 @@ $(document).ready(()=>{
 
                 <div class="portfolioImg" id="portfolioImg">
                   <label class="portfolioShow" id="portfolioShow">
-                    <h4 style="">Cahtting Page</h4>
+                    <h4>Cahtting Page</h4>
                     <div> 옛날부터 인터넷 메신저는 항상 존재해 있었습니다. 언제 받을지도 모르는 전화를 붙잡고 있는 것보다는 메시지를 보내놓고 상대방이 편할 때 연락할 수 있고, 말로 다 전하지 못한 내용을 글로 전하는 것이 편할 때도 있습니다.</div>
                     <div> 개인적으로 상대방에서 전하고 싶은 메시지를 실시간으로 주고받으며 대화할 수 있으며, 다른사람의 대화내용을 훔쳐볼 수 없도록 구현한 채팅페이지 입니다.</div>
                     <button type="button" class="btn btn-secondary" onclick="goGit()">git으로 이동</button>
@@ -182,7 +143,7 @@ $(document).ready(()=>{
                 <div>
                   <img src="assets/img/email.png" alt="">
                 </div>
-                <label>whwwhs7837@gmail.com</label>
+                <label>woo.975@hanmail.net</label>
               </dd>
 
               <dd>
