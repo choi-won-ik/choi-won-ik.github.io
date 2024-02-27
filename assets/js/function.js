@@ -35,7 +35,7 @@ window.onload=()=>{
 
 	$.ajax({
 		type : "post",
-		url : "https://script.google.com/macros/s/AKfycbw_zDFDqACtsKSD__dOQVIUJMxoJzAKJmTkMbEsG4q2z5_TI_qiFTJoIjrsR8IDaUCT/exec",
+		url : "https://script.google.com/macros/s/AKfycbzKWHan6deUXJ7UfWJRohfy-jaqsRE2GcDtP9ZRY1Bg17cJKQvB_2FpDPfYOnYqAmMKzQ/exec",
 		data : JSON.stringify({
 	        	name : name,
 	        	email:email,
