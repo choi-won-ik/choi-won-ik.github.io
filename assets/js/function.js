@@ -25,8 +25,6 @@ window.onload=()=>{
 
   $sendMail.addEventListener('click',(event)=>{
 
-    event.preventDefault();
-
     let data = createData(event);
 
     let name = data.get('name');
