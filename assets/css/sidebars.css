@@ -153,12 +153,14 @@ main {
 .skillsLeft{
   width: 47%; 
   float: left; 
+  height: 180px;
   margin-right: 3%;
 }
 
 .skillsRight{
   width: 47%; 
   float: right; 
+  height: 180px;
   margin-left: 3%;
 }
 
