@@ -39,7 +39,7 @@ $(document).ready(()=>{
     window.addEventListener('scroll',()=>{
       // 휠을 내릴 때
       if(count+1<$contentAll.length){
-        if($contentAll[count+1].getBoundingClientRect().top<windowHeight){
+        if($contentAll[count+1].getBoundingClientRect().top<=windowHeight){
           count=count+1;
         }
       }
@@ -49,7 +49,7 @@ $(document).ready(()=>{
       }
       // 휠을 올릴 때
       if(count>0){
-        if($contentAll[count-1].getBoundingClientRect().bottom>windowHeight){
+        if($contentAll[count].getBoundingClientRect().top>windowHeight){
           count=count-1;
         }
       }
@@ -83,7 +83,8 @@ $(document).ready(()=>{
     const $mailForm=document.getElementById('mailForm');
     // 내 주소
     const $myAdr=document.getElementById('myAdr');
-    
+    // 슬라이드 암전
+    const $slide =document.getElementById('slide');
     
     // 좁아졌을 때
     if(minWidth<1524&&$nav.classList.contains('off')){
@@ -100,6 +101,11 @@ $(document).ready(()=>{
 
     $navBTN.addEventListener('click',()=>{
       $sideMenu.classList.toggle('off');
+      if(!$sideMenu.classList.contains('off')){
+        $slide.classList.add('show');
+      }else{
+        $slide.classList.remove('show');
+      }
     });
 	
 	  window.addEventListener('resize',()=>{
@@ -115,11 +121,13 @@ $(document).ready(()=>{
 		}
 		// 넓어졌을 때
 		else if(minWidth>=1524&&!$nav.classList.contains('off')){
-		  
 		  $sideMenu.classList.remove('off');
 		  $nav.classList.add('off');
 	
 		  $content.classList.remove('on');
+      if($slide.classList.contains('show')){
+        $slide.classList.remove('show');
+      }
 		}
 		// 메일 보내기 더욱 좁아졌을 때
 		if(minWidth<1222&&!$myAdr.classList.contains('turn')){
