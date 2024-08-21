@@ -8,83 +8,90 @@ main {
   position: relative;
 }
 
-.d-flex.flex-column.flex-shrink-0.p-3.text-bg{
+.nav-link.text-black{
+  cursor: pointer !important;
+}
+.nav-link.text-black:hover{
+  background-color: rgb(132, 205, 236);
+}
+
+.d-flex.flex-column.flex-shrink-0.p-3.text-bg {
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
-  width: 21%; 
-  height: 100%; 
+  width: 21%;
+  height: 100%;
   position: fixed;
   left: 0;
   background-color: rgb(161, 215, 238);
   z-index: 1;
 }
 
-.d-flex.flex-column.flex-shrink-0.p-3.text-bg.off{
+.d-flex.flex-column.flex-shrink-0.p-3.text-bg.off {
   transform: translateX(-100%);
 }
 
-.navbar.navbar-dark.bg-dark.fixed-top.off{
+.navbar.navbar-dark.bg-dark.fixed-top.off {
   display: none !important;
-  
+
 }
 
-.slide.show{
-  width: 100%; 
-  height: 100%; 
-  position: 
-  absolute; 
+.slide.show {
+  width: 100%;
+  height: 100%;
+  position:
+    absolute;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
-.navbar.navbar-dark.bg-dark.fixed-top{
+.navbar.navbar-dark.bg-dark.fixed-top {
   display: block;
 }
 
-.myImg{
-  display: flex; 
-  justify-content: center; 
+.myImg {
+  display: flex;
+  justify-content: center;
   margin-top: 100px;
 }
 
-.myImg img{
-  width: 170px; 
+.myImg img {
+  width: 170px;
   border-radius: 100%;
 }
 
-.myName{
-  display: flex; 
-  justify-content: center; 
-  margin-top: 20px; 
-  font-size: 30px; 
+.myName {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 30px;
   color: white;
 }
 
-.nav.nav-pills.flex-column.mb-auto li{
+.nav.nav-pills.flex-column.mb-auto li {
   position: relative;
 }
 
-.nav.nav-pills.flex-column.mb-auto div{
+.nav.nav-pills.flex-column.mb-auto div {
   font-size: 20px;
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.nav-link.text-black{
+.nav-link.text-black {
   height: 60px;
   color: white !important;
 }
 
-.nav-link.text-black.on{
-  color: rgb(146, 231, 237) !important; 
-  background-color: white ; 
-  
+.nav-link.text-black.on {
+  color: rgb(146, 231, 237) !important;
+  background-color: white;
+
 }
 
-.content{
-  margin-left: 27%; 
+.content {
+  margin-left: 27%;
   width: 50%;
   src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
   font-family: "Noto Sans KR", sans-serif;
@@ -95,186 +102,206 @@ main {
   position: relative;
 }
 
-.content.on{
-  margin-left: 15%; 
+.content.on {
+  margin-left: 15%;
 
   width: 60%;
 }
 
-.content li{
+.content li {
   list-style-type: none;
 }
 
-.content h1{
+.content h1 {
   font-weight: bold;
-  color: rgb(146, 231, 237) ;
+  color: rgb(146, 231, 237);
   font-size: 40px;
   margin-bottom: 30px;
 }
 
-.content h2{
+.content h2 {
   font-size: 30px;
   font-weight: bold;
 }
 
-.content h3{
+.content h3 {
   font-weight: bold;
   margin-top: 20px;
 }
 
-.content h5{
+.content h5 {
   color: black;
 }
 
-.content div{
+.content div {
   font-size: 17px;
   margin-top: 30px;
 }
 
-.line{
-  margin-top: 45px; 
+.line {
+  margin-top: 45px;
   margin-bottom: 45px;
 }
 
-.content dl{
+.content dl {
   overflow: auto;
 }
 
 /* introduction */
-.introduction{
+.introduction {
   margin-top: 160px;
 }
 
-.introduction hr{
-  margin-top: 50px; 
-  margin-bottom: 40px; 
+.introduction hr {
+  margin-top: 50px;
+  margin-bottom: 40px;
   border: 0;
 }
 
-.introduction span{
+.introduction span {
   font-size: 13px;
 }
 
 /* skills */
-.skills dl dd div{
+.skills dl dd div {
   font-size: 13px;
 }
 
-.skillsLeft{
-  width: 47%; 
-  float: left; 
+.skillsLeft {
+  width: 47%;
+  float: left;
   height: 180px;
   margin-right: 3%;
 }
 
-.skillsRight{
-  width: 47%; 
-  float: right; 
+.skillsRight {
+  width: 47%;
+  float: right;
   height: 180px;
   margin-left: 3%;
 }
 
 /* Portfolio */
-.Portfolio article{
+.Portfolio article {
   overflow: auto;
+  display: flex;
 }
 
-.portfolioImg{
-  display: block;
-  width:100%;
-  height: 430px;
+.portfolioImg {
+  display: flex;
+  width: 100%;
+  height: 330px;
   position: relative;
+  margin-top: 0px !important;
 }
 
-.Portfolio label{
+.portfolioShow-box {
+  overflow-y: hidden;
+  margin: 0px;
+  width: 47%;
+  position: relative;
+  margin-top: 0px !important;
+}
+
+.portfolioShow-box:hover {
+  .portfolioShow {
+    display: block;
+  }
+}
+
+.Portfolio label {
   color: rgb(99, 99, 99);
 }
 
-.portfolioShow{
-  display : none;
-  background-color: rgba(13, 110, 253, 0.9);
-  color: black !important; 
+.portfolioShow {
+  overflow: hidden;
+  display: none;
+  background-color: rgba(61, 139, 255, 0.9);
+  color: black !important;
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
-.portfolioShow.on{
-  display : block;
-  display: grid;
-}
 
-.portfolioShow h4{
+
+.portfolioShow h4 {
   font-weight: bold;
-  margin: 20px;
+  padding: 20px;
+  color: rgb(48, 48, 48);
 }
 
-.portfolioShow div{
+.portfolioShow div {
   width: 94%;
-  justify-self: center;
+  color: rgb(48, 48, 48);
+  padding: 0px 20px;
 }
 
-.Portfolio button{
-  justify-self: end; 
-  height: 40px; 
-  margin: 20px; 
-  margin-top: 2%;
+.portfolioShow button {
+  justify-self: end;
+  height: 40px;
+  margin: 20px;
+  position: absolute;
+  margin-left: auto;
+  bottom: 0;
+  right: 0;
 }
 
-.portfolioImg img{
+.portfolioImg img {
   width: 100%;
-  height: 430px;
+  height: 330px;
   display: flex;
+  
 }
 
 /* contact */
-.myAdr{
-  float: left; 
+.myAdr {
+  float: left;
   width: 380px;
 }
 
-.myAdr.turn{
+.myAdr.turn {
   width: 99%;
 }
 
-.contact dl dd{
-  margin-bottom: 40px;  
+.contact dl dd {
+  margin-bottom: 40px;
 }
 
-.contact dl dd img{
-  width: 70px; 
+.contact dl dd img {
+  width: 70px;
   height: 70px;
 }
 
-.contact dl dd label{
+.contact dl dd label {
   margin-left: 20px;
-  justify-content: center; 
+  justify-content: center;
   margin-top: 25px;
   font-size: 18px;
 }
 
-.contact .mailForm{
-  float: right; 
+.contact .mailForm {
+  float: right;
   width: 45%;
 }
 
-.mailForm.turn{
+.mailForm.turn {
   width: 100%;
   float: left;
 }
 
-.contact form div{
+.contact form div {
   margin-top: 15px;
 }
 
-.contact form input{
+.contact form input {
   height: 54px;
 }
 
-.mailInput{
+.mailInput {
   border: transparent;
   background: #f2f3f7;
-  
+
   width: 99%;
   font-size: 16px;
   font-weight: 400;
@@ -282,6 +309,6 @@ main {
   padding: 10px 20px;
 }
 
-.mailForm.turn .btn.btn-primary{
+.mailForm.turn .btn.btn-primary {
   float: right;
 }
