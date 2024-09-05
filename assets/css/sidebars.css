@@ -8,6 +8,10 @@ main {
   position: relative;
 }
 
+.hidden{
+  display = none;
+}
+
 .nav-link.text-black{
   cursor: pointer !important;
 }
@@ -235,6 +239,11 @@ main {
   width: 94%;
   color: rgb(48, 48, 48);
   padding: 0px 20px;
+}
+
+.portfolioShow .btn.btn-dark{
+  margin-left: 5%;  
+  right: auto;
 }
 
 .portfolioShow button {
