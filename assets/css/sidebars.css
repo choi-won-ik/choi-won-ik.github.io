@@ -1,6 +1,5 @@
-body{
-  width:100%;
-}
+/* .body {
+} */
 
 main {
   height: 100%;
@@ -31,6 +30,7 @@ main {
   background-color: rgb(161, 215, 238);
   z-index: 1;
 }
+
 
 .d-flex.flex-column.flex-shrink-0.p-3.text-bg.off {
   transform: translateX(-100%);
@@ -151,6 +151,19 @@ main {
 
 .content dl {
   overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 두 개의 동일한 열을 생성 */
+  gap: 10px; /* 요소들 사이의 간격 설정 */
+  overflow: hidden;
+}
+
+.content dl dd{
+  width: 100%;
+  margin-left: 3%;
+}
+
+.content .skillsLast div{
+  font-size: 13px;
 }
 
 /* introduction */
@@ -173,19 +186,6 @@ main {
   font-size: 13px;
 }
 
-.skillsLeft {
-  width: 47%;
-  float: left;
-  height: 180px;
-  margin-right: 3%;
-}
-
-.skillsRight {
-  width: 47%;
-  float: right;
-  height: 180px;
-  margin-left: 3%;
-}
 
 /* Portfolio */
 .Portfolio article {
