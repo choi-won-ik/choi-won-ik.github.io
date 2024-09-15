@@ -149,7 +149,7 @@ main {
   margin-bottom: 45px;
 }
 
-.content dl {
+.content .skill-list {
   overflow: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 두 개의 동일한 열을 생성 */
@@ -157,7 +157,7 @@ main {
   overflow: hidden;
 }
 
-.content dl dd{
+.content .skill-op{
   width: 100%;
   margin-left: 3%;
 }
