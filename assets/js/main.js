@@ -86,18 +86,18 @@ $(document).ready(()=>{
     // 슬라이드 암전
     const $slide =document.getElementById('slide');
     
-    // // 좁아졌을 때
-    // if(minWidth<1524&&$nav.classList.contains('off')){
-    //   $sideMenu.classList.add('off');
-		//   $nav.classList.remove('off');
+    // 좁아졌을 때
+    if(minWidth<1524&&$nav.classList.contains('off')){
+      $sideMenu.classList.add('off');
+		  $nav.classList.remove('off');
 	
-		//   $content.classList.add('on');
-    //   // 메일 보내기 더욱 좁아졌을 때
-    //   if(minWidth<1222&&!$myAdr.classList.contains('turn')){
-    //     $myAdr.classList.add('turn');
-    //     $mailForm.classList.add('turn');
-    //   }
-    // }
+		  $content.classList.add('on');
+      // 메일 보내기 더욱 좁아졌을 때
+      if(minWidth<1222&&!$myAdr.classList.contains('turn')){
+        $myAdr.classList.add('turn');
+        $mailForm.classList.add('turn');
+      }
+    }
 
     $navBTN.addEventListener('click',()=>{
       $sideMenu.classList.toggle('off');
@@ -133,7 +133,6 @@ $(document).ready(()=>{
 		if(minWidth<1222&&!$myAdr.classList.contains('turn')){
 		  $myAdr.classList.add('turn');
 		  $mailForm.classList.add('turn');
-
 		}
 		// 매일 보내기 넓어 졌을 때
 		else if(minWidth>=1222&&$myAdr.classList.contains('turn')){
