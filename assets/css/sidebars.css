@@ -109,9 +109,8 @@ main {
 }
 
 .content.on {
-  margin-left: 15%;
-
-  width: 60%;
+  margin-left: 0;
+  width: 95%;
 }
 
 .content li {
