@@ -241,6 +241,7 @@ main {
   width: 94%;
   color: rgb(48, 48, 48);
   padding: 0px 20px;
+  font-size: clamp(14px, 1.8vw, 16px);
 }
 
 .portfolioShow .btn.btn-dark{
@@ -256,6 +257,15 @@ main {
   margin-left: auto;
   bottom: 0;
   right: 0;
+  font-size: clamp(14px, 1.8vw, 16px);
+}
+
+.portfolioShow .btn.btn-dark{
+  width: 24%; 
+}
+
+.portfolioShow .btn.btn-secondary{
+  width: 32%;
 }
 
 .portfolioImg img {
