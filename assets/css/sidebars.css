@@ -330,6 +330,10 @@ main {
   padding: 10px 20px;
 }
 
+.mailForm.turn{
+  overflow-x: hidden;
+}
+
 .mailForm.turn .btn.btn-primary {
   float: right;
 }
